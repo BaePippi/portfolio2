@@ -32,9 +32,9 @@
   const splide = new Splide(".splide", {
     type: "loop",
     drag: "free",
-    focus: "center",
-    perPage: 3,
-    gap:10,
+    focus: 2,
+    perPage: 4.5,
+    gap: 10,
     autoScroll: {
       speed: 1,
     },
@@ -42,4 +42,17 @@
     arrows: false,
   });
   splide.mount(window.splide.Extensions);
+  
+  const $slide = document.querySelectorAll(".slideImg");
+
+  $slide.forEach(item => {
+    item.addEventListener("mouseenter", e=>{
+      // console.log(e)
+      item.classList.add('displayNone')
+    })
+    item.addEventListener("mouseleave", (e) => {
+      // console.log(e);
+      item.classList.remove("displayNone");
+    });
+  })
 })();

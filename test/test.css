@@ -361,8 +361,7 @@ body.fade {
 }
 .projects {
   width: 100vw;
-  height: 60%;
-  background: #ff5620;
+  height: 60vh;
 }
 .projects .inner {
   width: 100%;
@@ -377,6 +376,11 @@ body.fade {
   width: 100%;
   height: 100%;
 }
+.splide__list {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
 
 .swiper-slide {
   text-align: center;
@@ -390,7 +394,28 @@ body.fade {
 .splide__slide {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 70%;
+  /* object-fit: cover; */
   background-color: #fff;
 }
+.splide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* .about {
+    background: url("../image/snow.jpeg") no-repeat center;
+  background-size: cover;
+}
+.hyft {
+  background: url("../image/hyftMain2.png") no-repeat center;
+  background-size: cover;
+}
+.knotted {
+  background: url("../image/knottedMain.png") no-repeat center;
+  background-size: cover;
+}
+.dosiraktong {
+  background: url("../image/dosiraktongMain.png") no-repeat center;
+  background-size: cover;
+} */
