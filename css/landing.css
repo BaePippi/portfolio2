@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard-Regular";
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src: local("Pretendard Black"),
+    url("./woff2/Pretendard-Black.woff2") format("woff2"),
+    url("./woff/Pretendard-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard ExtraBold"),
+    url("./woff2/Pretendard-ExtraBold.woff2") format("woff2"),
+    url("./woff/Pretendard-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"),
+    url("./woff2/Pretendard-Bold.woff2") format("woff2"),
+    url("./woff/Pretendard-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"),
+    url("./woff2/Pretendard-SemiBold.woff2") format("woff2"),
+    url("./woff/Pretendard-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"),
+    url("./woff2/Pretendard-Medium.woff2") format("woff2"),
+    url("./woff/Pretendard-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"),
+    url("./woff2/Pretendard-Regular.woff2") format("woff2"),
+    url("./woff/Pretendard-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"),
+    url("./woff2/Pretendard-Light.woff2") format("woff2"),
+    url("./woff/Pretendard-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: local("Pretendard ExtraLight"),
+    url("./woff2/Pretendard-ExtraLight.woff2") format("woff2"),
+    url("./woff/Pretendard-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"),
+    url("./woff2/Pretendard-Thin.woff2") format("woff2"),
+    url("./woff/Pretendard-Thin.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Pretendard";
+  /* 드래그방지 */
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  color: #222;
+  font-size: 16px;
+  line-height: 1; /* x1 */
+  letter-spacing: 0;
+  word-break: keep-all; /* 단어를 지켜서 줄내림 */
+  overflow-y: hidden;
+  overflow-x: hidden;
+  opacity: 1;
+  transition-duration: 3s;
+  transition-property: opacity;
+}
+body.fade {
+  opacity: 0;
+}
+.displayNone {
+  display: none !important;
+}
+.wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+.landingBox {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #ff5620;
+}
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2.6242vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: #fff5f1;
+  font-weight: 500;
+}
+.one {
+  position: relative;
+  width: 100%;
+  height: 8.8542vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.size260 {
+  position: relative;
+  display: block;
+  font-size: 13.5417vw;
+}
+.one p.size260 {
+  margin-right: 37.8125vw;
+}
+.one-small {
+  position: relative;
+  width: 10.4167vw;
+  height: 11.4583vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 2.0833vw;
+  font-family: 600;
+}
+@media screen and (max-width: 764px) {
+  .one {
+    height: 10.8542vw;
+  }
+  .size260 {
+    font-size: 16.5445vw;
+  }
+  .one p.size260 {
+    margin-right: 47.8vw;
+  }
+  .one-small {
+    margin-right: 0.7vw;
+    font-size: 2.5vw;
+    width: 11.4167vw;
+    height: 14.5vw;
+  }
+}
+
+/* 애니메이션 */
+
+.clipText > h1,
+.clipText > p {
+  position: relative;
+}
+
+.on {
+  animation: cliptext 1.5s ease-in-out both;
+}
+.size260:hover,
+.one-small:hover {
+  animation: cliptext2 1s ease-in-out both;
+}
+
+@keyframes cliptext {
+  0% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    transform: translateY(100%);
+  }
+  95% {
+    transform: translateY(0%);
+  }
+  100% {
+    clip-path: polygon(0% 00%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes cliptext2 {
+  0% {
+    clip-path: polygon(0% 00%, 100% 0%, 100% 100%, 0% 100%);
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(100%);
+  }
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  }
+}
+
+/* 전환 */
