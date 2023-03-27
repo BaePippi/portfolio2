@@ -12,7 +12,7 @@
   function clip_text2(dom) {
     const childs = dom.children;
     for (let i = 0; i < childs.length; i++) {
-      childs[i].style.animationDelay = `${(SEC * i) + 0.5}s`;
+      childs[i].style.animationDelay = `${SEC * i + 0.5}s`;
       childs[i].classList.add("on");
     }
   }
@@ -52,11 +52,30 @@
 
   // 슬라이드 호버 애니메이션
   const $slide = document.querySelectorAll(".slideImg");
+  const $pn1 = document.getElementById("pn1");
+  const $pn2 = document.getElementById("pn2");
+  const $pn3 = document.getElementById("pn3");
+  const $pn4 = document.getElementById("pn4");
+  const $pn = document.querySelector(".projectsName");
+  const aa = $pn.firstElementChild.children;
 
   $slide.forEach((item) => {
     item.addEventListener("mouseenter", (e) => {
       item.classList.toggle("hover");
-      console.dir(item.firstElementChild);
+        for (let i = 0; i < aa.length; i++) {
+          for (let z = 0; z < aa[i].children.length; z++) {
+            console.log(aa[i].children[z]);
+            aa[i].children[z].classList.toggle("on");
+            aa[i].children[z].classList.toggle("off");
+          }
+        }
+        $pn4.firstElementChild.innerText=`${item.getAttribute('id')}`
+        console.dir($pn4)
+        setTimeout(()=>{
+          $pn4.classList.toggle("displayNone");
+        },300)
+
+
       $slide.forEach((item2) => {
         if (!item2.classList.contains("hover")) {
           item2.classList.add("other");
@@ -66,6 +85,22 @@
     });
     item.addEventListener("mouseleave", (e) => {
       item.classList.toggle("hover");
+      for (let i = 0; i < aa.length; i++) {
+        for (let z = 0; z < aa[i].children.length; z++) {
+          // console.log(aa[i].children[z]);
+          // if (aa[i].children[z].classList.contains("on")) {
+          //   aa[i].children[z].classList.remove("on");
+          // }
+          aa[i].children[z].classList.toggle("on");
+          aa[i].children[z].classList.toggle("off");
+        }
+      }
+      // $pn3.classList.toggle("on");
+      // setTimeout(()=>{
+        $pn4.classList.toggle("displayNone");
+      // },500)
+      
+
       $slide.forEach((item2) => {
         item2.classList.remove("other");
       });

@@ -223,13 +223,8 @@ body.fade {
 }
 
 .on {
-  animation: cliptext .5s ease both;
+  animation: cliptext 0.5s ease both;
 }
-/* .size260:hover,
-.one-small:hover,
-.name:hover {
-  animation: cliptext2 1s ease-in-out both;
-} */
 
 @keyframes cliptext {
   0% {
@@ -326,7 +321,7 @@ body.fade {
 .name {
   position: relative;
   display: block;
-  font-size: 11vw;
+  font-size: 10vw;
 }
 .one p.name {
   margin-right: 33vw;
@@ -338,7 +333,7 @@ body.fade {
 .projectsName > .inner .one-small {
   position: relative;
   width: 6.2vw;
-  height: 9.5vw;
+  height: 9.3vw;
   display: flex;
   color: #ff5620;
   flex-direction: column;
@@ -346,29 +341,48 @@ body.fade {
   font-size: 1.2vw;
   font-family: 400;
 }
-.projectsName:hover {
-   animation: cliptext2 .5s ease both; 
+.selectedName {
+    position: absolute;   
+}
+/* .projectsName  */
+#pn1, #pn2, #pn3 {
+    overflow: hidden;
+}
+#pn1, #pn2, #pn3, #pn1 .name,
+#pn2 .name, #pn3 p {
+    transition: transform 1s;
+}
+#pn1 .name.on,
+#pn2 .name.on,
+#pn3.on,
+#pn3 p.on {
+  animation: cliptext2 0.5s ease both;
+  /* overflow: hidden; */
+}
+#pn1 .name.off,
+#pn2 .name.off,
+#pn3.off,
+#pn3 p.off {
+  animation: cliptext3 0.5s ease both;
+  /* overflow: hidden; */
 }
 @keyframes cliptext2 {
-  /* 0% {
-    clip-path: polygon(0% 00%, 100% 0%, 100% 100%, 0% 100%);
+ 
+  0% {
     transform: translateY(0%);
-  }
-  95% {
-    transform: translateY(100%);
   }
   100% {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
-  } */
-  0% {
-    clip-path: polygon(0% 00%, 100% 0%, 100% 100%, 0% 100%);
-    transform: translateY(0%);
-  }
-  95% {
     transform: translateY(-100%);
   }
-  100% {
-        clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);  }
+}
+@keyframes cliptext3 {
+ 
+  0% {
+      transform: translateY(-100%);
+}
+100% {
+      transform: translateY(0%);
+  }
 }
 .projects {
   position: fixed;
