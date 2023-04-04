@@ -27,7 +27,6 @@
        window.setTimeout(()=> {
         $landing.classList.add("displayNone");
         document.body.classList.remove("fade");
-        // location.href = "main.html"
        },8000)
         
     });

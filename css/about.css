@@ -1,0 +1,425 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src: local("Pretendard Black"),
+    url("./woff2/Pretendard-Black.woff2") format("woff2"),
+    url("./woff/Pretendard-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard ExtraBold"),
+    url("./woff2/Pretendard-ExtraBold.woff2") format("woff2"),
+    url("./woff/Pretendard-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"),
+    url("./woff2/Pretendard-Bold.woff2") format("woff2"),
+    url("./woff/Pretendard-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"),
+    url("./woff2/Pretendard-SemiBold.woff2") format("woff2"),
+    url("./woff/Pretendard-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"),
+    url("./woff2/Pretendard-Medium.woff2") format("woff2"),
+    url("./woff/Pretendard-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"),
+    url("./woff2/Pretendard-Regular.woff2") format("woff2"),
+    url("./woff/Pretendard-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"),
+    url("./woff2/Pretendard-Light.woff2") format("woff2"),
+    url("./woff/Pretendard-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: local("Pretendard ExtraLight"),
+    url("./woff2/Pretendard-ExtraLight.woff2") format("woff2"),
+    url("./woff/Pretendard-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"),
+    url("./woff2/Pretendard-Thin.woff2") format("woff2"),
+    url("./woff/Pretendard-Thin.woff") format("woff");
+}
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Pretendard";
+  /* 드래그방지 */
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  color: #222;
+  font-size: 16px;
+  line-height: 1; /* x1 */
+  letter-spacing: 0;
+  word-break: keep-all; /* 단어를 지켜서 줄내림 */
+  overflow-y: hidden;
+  overflow-x: hidden;
+  opacity: 1;
+  transition-duration: 3s;
+  transition-property: opacity;
+}
+body.fade {
+  opacity: 0;
+}
+.displayNone {
+  display: none !important;
+}
+.wrap {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 64px;
+  height: 100vh;
+  writing-mode: vertical-rl;
+  background: #fff;
+  border-right: 1px solid #e3e3e3;
+  z-index: 6;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: 30px 0;
+  background: url("../image/barcodelogo.png") no-repeat center;
+  background-size: cover;
+  transform: rotate(-90deg);
+  /* font-family: "Lilita One", cursive;
+    font-size: 24px;
+    font-weight: 600; */
+}
+.menu {
+  display: flex;
+  height: 80%;
+  justify-content: space-between;
+  padding: 30px 0;
+  transform: rotate(180deg);
+}
+
+
+
+
+
+section {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+.text-orange {
+  color: #ff5620 !important;
+}
+.inner {
+  position: relative;
+  display: block;
+  max-width: 1420px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.innerFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  color: #ff5620;
+  font-size: 37px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contents {
+  word-break: break-all;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+  4. visual
+   ========================================================================== */
+.visual {
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+.visual .inner {
+  max-width: 1980px;
+  padding: 0;
+}
+.visual-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background: url("../image/main2.png") fixed no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.visual-intro pre {
+  font-family: "Pretendard";
+  font-weight: 400;
+  display: block;
+  font-size: 3.125vw;
+  position: absolute;
+  right: 3vw;
+  padding: 50px;
+}
+.visual-intro pre span {
+  font-weight: 600;
+}
+
+/* ==========================================================================
+  5. ABOUT
+   ========================================================================== */
+.about {
+  position: relative;
+  z-index: 50 !important;
+  background-color: #fffaf6;
+}
+.about .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+  6. skill
+   ========================================================================== */
+.skill {
+  position: relative;
+}
+.skill .contents {
+  margin-bottom: 80px;
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  gap: 50px 0;
+}
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+  height: 200px;
+  /* margin-bottom: 100px; */
+}
+.skillIcon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+.htmlIcon {
+  background: url("../image/html.svg") no-repeat center;
+  background-size: cover;
+}
+.cssIcon {
+  background: url("../image/css.svg") no-repeat center;
+  background-size: cover;
+}
+.jsIcon {
+  background: url("../image/js.svg") no-repeat center;
+  background-size: cover;
+}
+.reactIcon {
+  background: url("../image/react.svg") no-repeat center;
+  background-size: contain;
+}
+.githubIcon {
+  background: url("../image/github.svg") no-repeat center;
+  background-size: contain;
+}
+.figmaIcon {
+  background: url("../image/figma.svg") no-repeat center;
+  background-size: contain;
+}
+.photoshopIcon {
+  background: url("../image/photoshop.svg") no-repeat center;
+  background-size: contain;
+}
+.illustratorIcon {
+  background: url("../image/illustrator.svg") no-repeat center;
+  background-size: contain;
+}
+.counter {
+  font-weight: 600;
+  font-size: 35px;
+}
+.skill-name {
+  font-weight: 600;
+  font-size: 20px;
+}
+/* ==========================================================================
+  7.possibility
+   ========================================================================== */
+.possibility {
+  position: relative;
+}
+.possibility .contents {
+  display: flex;
+  text-align: start;
+  align-items: center;
+  justify-content: space-between;
+}
+.possibility-contents-item {
+  width: 50%;
+  /* height: 800px; */
+}
+.possibility-contents-item div {
+  margin-bottom: 5px;
+}
+.possibility-contents-item p {
+  font-weight: 400;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+.chartContainer {
+  width: 650px;
+  height: 650px;
+}
+/* ==========================================================================
+  8. Portfolio
+   ========================================================================== */
+.portfolio {
+  position: relative;
+}
+.swiper-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  /* overflow: hidden; */
+}
+.portfolioSwiper {
+  width: 100%;
+  height: 100%;
+}
+/* .portfolioSwiper .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+} */
+.portfolioSlide {
+  display: block;
+  width: 100%;
+}
+.hyft {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../image/hyftMain.png") no-repeat center;
+  background-size: contain;
+}
+.dosiraktong {
+  width: 100%;
+  height: 100%;
+  background: url("../image/dosiraktong.png") no-repeat center;
+  background-size: contain;
+}
+.knotted {
+  width: 100%;
+  height: 100%;
+  background: url("../image/knotted.png") no-repeat center;
+  background-size: contain;
+}
