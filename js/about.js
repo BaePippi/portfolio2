@@ -4,8 +4,10 @@
   let mainSwiper = new Swiper(".mainSwiper", {
     direction: "vertical",
     slidesPerView: 1,
+    slidesPerGroup: 1,
     mousewheel: {
-      sensitivity: 90,
+      sensitivity: 1,
+      eventsTarget: ".mainSwiper",
     },
     pagination: {
       el: ".main-swiper-pagination",
@@ -21,6 +23,7 @@
   const ctx = document.getElementById("myChart");
   // marker
   const $marker = document.querySelector(".marker");
+  let $chart = null;
 
   function setMarker(e) {
     $marker.style.left = e.offsetLeft + "px";
@@ -54,6 +57,61 @@
         item.classList.add("active");
       });
     }
+    // about 애니메이션
+    if (current !== 1) {
+      const $hauntedText = $("[data-haunted-text]");
+      $hauntedText.css({ visibility: "hidden" });
+    }
+    if (current === 1) {
+      const $hauntedText = $("[data-haunted-text]");
+      const maxDuration = 2000;
+      const maxDelay = 500;
+      const minDuration = maxDuration - maxDelay;
+
+      $hauntedText.blast({
+        delimiter: "character",
+      });
+
+      setTimeout(function () {
+        $hauntedText.find(".blast").each(function (i, el) {
+          const $el = $(el);
+
+          const duration = getRandomValue(minDuration, maxDuration);
+          const delay = maxDuration - duration;
+          const blur = getRandomValue(2, 10);
+
+          // From
+          $el.velocity(
+            {
+              opacity: 0,
+              blur: blur,
+            },
+            {
+              duration: 0,
+            }
+          );
+
+          // To
+          $el.velocity(
+            {
+              opacity: 1,
+              blur: 0,
+            },
+            {
+              duration: duration,
+              delay: delay,
+              ease: [250, 0],
+            }
+          );
+        });
+
+        $hauntedText.css({ visibility: "visible" });
+      }, 500);
+
+      const getRandomValue = function (min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      };
+    }
     //   skill countUp animation
     if (current === 2) {
       for (let i = 0; i < 8; i++) {
@@ -74,62 +132,66 @@
       }
     }
     //   possibility 차트
-    if (current === 3) {
-      new Chart(ctx, {
-        type: "radar",
-        data: {
-          labels: [
-            "창의성",
-            "전문역량",
-            "열정&도전정신",
-            "책임감&성실성",
-            "커뮤니케이션",
-            "팀워크",
-          ],
-          datasets: [
-            {
-              label: "",
-              data: [80, 85, 100, 95, 95, 95],
-              borderWidth: 5,
-              fill: true,
-              backgroundColor: "#ff7d203f",
-              borderColor: "#ff7e20",
-              pointBackgroundColor: "#ff7e20",
-              pointBorderColor: "#ff7d203f",
-              pointHoverBackgroundColor: "#fff",
-              pointHoverBorderColor: "#ff7e20",
-            },
-          ],
-        },
-        options: {
-          plugins: {
-            datalabels: {
-              align: "top",
-            },
-            legend: {
-              display: false,
-            },
+    if (current === 3 && $chart === null) {
+      if ($chart === null) {
+        $chart = new Chart(ctx, {
+          type: "radar",
+          data: {
+            labels: [
+              "창의성",
+              "전문역량",
+              "열정&도전정신",
+              "책임감&성실성",
+              "커뮤니케이션",
+              "팀워크",
+            ],
+            datasets: [
+              {
+                label: "",
+                data: [80, 85, 100, 95, 95, 95],
+                borderWidth: 5,
+                fill: true,
+                backgroundColor: "#ff7d203f",
+                borderColor: "#ff7e20",
+                pointBackgroundColor: "#ff7e20",
+                pointBorderColor: "#ff7d203f",
+                pointHoverBackgroundColor: "#fff",
+                pointHoverBorderColor: "#ff7e20",
+              },
+            ],
           },
-          scales: {
-            r: {
-              ticks: {
+          options: {
+            plugins: {
+              datalabels: {
+                align: "top",
+              },
+              legend: {
                 display: false,
               },
-              beginAtZero: true,
-              pointLabels: {
-                font: {
-                  size: 20,
-                  weight: "700",
+            },
+            scales: {
+              r: {
+                ticks: {
+                  display: false,
+                },
+                beginAtZero: true,
+                pointLabels: {
+                  font: {
+                    size: 20,
+                    weight: "700",
+                  },
                 },
               },
             },
+            animation: {
+              duration: 2000,
+              easing: "easeInOutCubic",
+            },
           },
-          animation: {
-            duration: 2000,
-            easing: "easeInOutCubic",
-          },
-        },
-      });
+        });
+      } else {
+        $chart.destroy();
+      }
     }
   });
 

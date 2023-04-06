@@ -168,10 +168,6 @@ body.fade {
   transform: rotate(180deg);
 }
 
-
-
-
-
 section {
   position: relative;
   display: block;
@@ -279,6 +275,13 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.haunted-text {
+  position: relative;
+  visibility: hidden;
+}
+.haunted-text .blast {
+  will-change: opacity, filter;
 }
 
 /* ==========================================================================
