@@ -279,6 +279,7 @@ section {
 .haunted-text {
   position: relative;
   visibility: hidden;
+  font-size: 20px;
 }
 .haunted-text .blast {
   will-change: opacity, filter;
