@@ -171,9 +171,110 @@ body.fade {
 .project {
   position: relative;
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
-  background-color: violet;
+  height: 100vh;
+  /* background-color: antiquewhite; */
+}
+.inner {
+  position: relative;
+  display: flex;
+  width: 85vw;
+  height: 28vw;
+  margin-left: 64px;
+  /* background-color: aqua; */
 }
 .projectImg {
-  background-color: greenyellow;
+  position: relative;
+  display: block;
+  width: 55%;
+  border: 1px solid #ff5620;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.slideImg.one {
+  background: url(../image/knotted_A.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.slideImg.two {
+  background: url(../image/knotted_B.png) no-repeat center;
+  background-size: contain;
+}
+.slideImg.three {
+  background: url(../image/knotted_C.png) no-repeat center;
+  background-size: contain;
+}
+.slideImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.projectIntro {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-content: space-between;
+  width: 45%;
+  /* background-color: red; */
+}
+.projectIntroBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  background-color: #fff;
+  justify-content: space-between;
+}
+.projectName {
+  position: relative;
+  display: block;
+  font-size: 5.2vw;
+  font-weight: 600;
+  color: #ff5620;
+}
+.contents {
+  height: 50%;
+}
+table{
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  font-size: 1.25vw;
+}
+.icons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 6.77vw;
+  height: 2.7vw;
+  /* background-color: yellowgreen; */
+}
+.icons i {
+  position: relative;
+  display: block;
+  width: 2.7vw;
+  height: 100%;
+}
+.homepage {
+  background: url(../image/Home-icon.svg) no-repeat center;
+  background-size: cover;
+}
+.github {
+  background: url(../image/github-mark.svg) no-repeat center;
+  background-size: cover;
 }
