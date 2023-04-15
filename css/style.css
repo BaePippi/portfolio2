@@ -240,16 +240,22 @@ body.fade {
   transition: width 2s, transform 2s ease-in-out;
 }
 .red {
-  background-color: red;
+  /* background-color: red; */
   /* transition-delay: 0s; */
+  background: url(../image/knottedBg.png) no-repeat center;
+  background-size: cover;
 }
 .blue {
-  background-color: blue;
+  /* background-color: blue; */
   /* transition-delay: 1s; */
+  background: url(../image/hyftBg.png) no-repeat center;
+  background-size: cover;
 }
 .green {
-  background-color: green;
+  /* background-color: green; */
   /* transition-delay: 2s; */
+  background: url(../image/dosiraktongBg.jpeg) no-repeat center;
+  background-size: cover;
 }
 .width100 {
   width: 100vw;

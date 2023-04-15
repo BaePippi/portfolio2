@@ -257,6 +257,7 @@ section {
   position: absolute;
   right: 3vw;
   padding: 50px;
+  line-height: 1.5;
 }
 .visual-intro pre span {
   font-weight: 600;

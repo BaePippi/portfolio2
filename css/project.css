@@ -167,3 +167,13 @@ body.fade {
   padding: 30px 0;
   transform: rotate(180deg);
 }
+/* project */
+.project {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  background-color: violet;
+}
+.projectImg {
+  background-color: greenyellow;
+}
