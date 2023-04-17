@@ -201,7 +201,7 @@ body.fade {
   background-size: cover;
 }
 
-.slideImg.one {
+/* .slideImg{
   background: url(../image/knotted_A.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -214,7 +214,7 @@ body.fade {
 .slideImg.three {
   background: url(../image/knotted_C.png) no-repeat center;
   background-size: contain;
-}
+} */
 .slideImg {
   display: block;
   width: 100%;
@@ -268,7 +268,8 @@ table{
   position: relative;
   display: block;
   width: 2.7vw;
-  height: 100%;
+  height: 2.7vw;
+  transition: scale 0.2s ease-in-out, filter 0.2s ease-in-out;
 }
 .homepage {
   background: url(../image/Home-icon.svg) no-repeat center;
@@ -277,4 +278,8 @@ table{
 .github {
   background: url(../image/github-mark.svg) no-repeat center;
   background-size: cover;
+}
+.icons i:hover {
+  scale: 1.2;
+  filter: brightness(1.1);
 }

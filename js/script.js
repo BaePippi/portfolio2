@@ -64,13 +64,13 @@
       item.classList.toggle("hover");
         for (let i = 0; i < aa.length; i++) {
           for (let z = 0; z < aa[i].children.length; z++) {
-            console.log(aa[i].children[z]);
+            // console.log(aa[i].children[z]);
             aa[i].children[z].classList.toggle("on");
             aa[i].children[z].classList.toggle("off");
           }
         }
         $pn4.firstElementChild.innerText=`${item.getAttribute('id')}`
-        console.dir($pn4)
+        // console.dir($pn4)
         setTimeout(()=>{
           $pn4.classList.toggle("displayNone");
         },300)
@@ -81,7 +81,7 @@
           item2.classList.add("other");
         }
       });
-      console.log(item.classList.contains("hover"));
+      // console.log(item.classList.contains("hover"));
     });
     item.addEventListener("mouseleave", (e) => {
       item.classList.toggle("hover");
@@ -105,5 +105,12 @@
         item2.classList.remove("other");
       });
     });
+    console.dir(item.attributes[3]);
+    item.addEventListener('click', e => {
+      localStorage.setItem('project', item.id)
+      for(let i=0; i<item.attributes.length; i++){        
+          localStorage.setItem(`${item.attributes[i].name}`, item.attributes[i].value)
+        }
+    })
   });
 })();
