@@ -156,9 +156,6 @@ body.fade {
   background: url("../image/barcodelogo.png") no-repeat center;
   background-size: cover;
   transform: rotate(-90deg);
-  /* font-family: "Lilita One", cursive;
-    font-size: 24px;
-    font-weight: 600; */
 }
 .menu {
   display: flex;
@@ -175,20 +172,18 @@ body.fade {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  /* background-color: antiquewhite; */
 }
 .inner {
   position: relative;
   display: flex;
   width: 85vw;
-  height: 28vw;
+  height: 26.2vw;
   margin-left: 64px;
-  /* background-color: aqua; */
 }
 .projectImg {
   position: relative;
   display: block;
-  width: 55%;
+  width: 46.5vw;
   border: 1px solid #ff5620;
 }
 .swiper {
@@ -201,20 +196,6 @@ body.fade {
   background-size: cover;
 }
 
-/* .slideImg{
-  background: url(../image/knotted_A.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-.slideImg.two {
-  background: url(../image/knotted_B.png) no-repeat center;
-  background-size: contain;
-}
-.slideImg.three {
-  background: url(../image/knotted_C.png) no-repeat center;
-  background-size: contain;
-} */
 .slideImg {
   display: block;
   width: 100%;
@@ -250,7 +231,7 @@ body.fade {
 .contents {
   height: 50%;
 }
-table{
+table {
   width: 100%;
   height: 100%;
   text-align: left;
