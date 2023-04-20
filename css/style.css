@@ -296,6 +296,46 @@ body.fade {
   padding: 30px 0;
   transform: rotate(180deg);
 }
+.effect a {
+  overflow: visible;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+@keyframes eff-move {
+  30% {
+    -webkit-transform: translate3d(0, -5px, 0) rotate(5deg);
+    transform: translate3d(0, -5px, 0) rotate(5deg);
+  }
+  50% {
+    -webkit-transform: translate3d(0, -3px, 0) rotate(-4deg);
+    transform: translate3d(0, -3px, 0) rotate(-4deg);
+  }
+  80% {
+    -webkit-transform: translate3d(0, 0, 0) rotate(-3deg);
+    transform: translate3d(0, 0, 0) rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+.effect a:hover {
+  -webkit-animation-name: eff-move;
+  animation-name: eff-move;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
 
 .main {
   position: relative;
@@ -341,15 +381,21 @@ body.fade {
   font-family: 400;
 }
 .selectedName {
-    position: absolute;   
+  position: absolute;
 }
 /* .projectsName  */
-#pn1, #pn2, #pn3 {
-    overflow: hidden;
+#pn1,
+#pn2,
+#pn3 {
+  overflow: hidden;
 }
-#pn1, #pn2, #pn3, #pn1 .name,
-#pn2 .name, #pn3 p {
-    transition: transform 1s;
+#pn1,
+#pn2,
+#pn3,
+#pn1 .name,
+#pn2 .name,
+#pn3 p {
+  transition: transform 1s;
 }
 #pn1 .name.on,
 #pn2 .name.on,
@@ -366,7 +412,6 @@ body.fade {
   /* overflow: hidden; */
 }
 @keyframes cliptext2 {
- 
   0% {
     transform: translateY(0%);
   }
@@ -375,12 +420,11 @@ body.fade {
   }
 }
 @keyframes cliptext3 {
- 
   0% {
-      transform: translateY(-100%);
-}
-100% {
-      transform: translateY(0%);
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
 .projects {
@@ -446,8 +490,7 @@ body.fade {
   background-size: cover;
 }
 .pf {
-  background: rgba(0, 0, 0, 0) url("../image/BAESOYOUNG_0.png") no-repeat
-    center;
+  background: rgba(0, 0, 0, 0) url("../image/BAESOYOUNG_0.png") no-repeat center;
   background-size: cover;
 }
 .hover {

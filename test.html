@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+      *,
+      *:after,
+      *:before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      a:hover,
+      a:focus {
+        outline: none;
+      }
+
+      /*----*/
+
+      h3 {
+        color: #fff;
+        font-weight: bold;
+        margin: 0 0 50px 0;
+        position: relative;
+        padding: 0 0 5px 0;
+      }
+
+      h3:before {
+        content: "";
+        background: rgba(255, 255, 255, 0.1);
+        bottom: -4px;
+        width: 25%;
+        height: 1px;
+        left: 0;
+        position: absolute;
+      }
+
+      .back {
+        padding: 50px 0 150px 0;
+      }
+
+      .color-1 {
+        background: #353535;
+      }
+
+      .color-2 {
+        background: #353535;
+      }
+
+      .color-3 {
+        background: #353535;
+      }
+
+      .color-4 {
+        background: #353535;
+      }
+
+      .color-5 {
+        background: #353535;
+      }
+
+      .color-6 {
+        background: #353535;
+      }
+
+      .color-7 {
+        background: #353535;
+      }
+
+      .color-8 {
+        background: #353535;
+      }
+
+      .color-9 {
+        background: #353535;
+      }
+
+      .color-10 {
+        background: #353535;
+      }
+
+      body * {
+        font-family: Lato !important;
+      }
+      .menu a {
+        color: rgba(255, 255, 255, 0.8);
+        font-family: Lato;
+        font-size: 17pt;
+        font-weight: 400;
+        padding: 15px 25px;
+        position: relative;
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .SMN_effect-35 a {
+        overflow: visible;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: color 0.4s;
+        transition: color 0.4s;
+      }
+
+      @keyframes eff24-move {
+        30% {
+          -webkit-transform: translate3d(0, -5px, 0) rotate(5deg);
+          transform: translate3d(0, -5px, 0) rotate(5deg);
+        }
+        50% {
+          -webkit-transform: translate3d(0, -3px, 0) rotate(-4deg);
+          transform: translate3d(0, -3px, 0) rotate(-4deg);
+        }
+        80% {
+          -webkit-transform: translate3d(0, 0, 0) rotate(-3deg);
+          transform: translate3d(0, 0, 0) rotate(-3deg);
+        }
+        100% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+      }
+
+      .SMN_effect-35 a:hover {
+        -webkit-animation-name: eff24-move;
+        animation-name: eff24-move;
+        -webkit-animation-duration: 0.4s;
+        animation-duration: 0.4s;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="back color-5">
+      <div class="row columns">
+        <h3>Effect 35</h3>
+        <ul class="menu align-center expanded text-center SMN_effect-35">
+          <li>
+            <a href=""><span>Home</span></a>
+          </li>
+          <li>
+            <a href=""><span>About</span></a>
+          </li>
+          <li>
+            <a href=""><span>Gallery</span></a>
+          </li>
+          <li>
+            <a href=""><span>Notes</span></a>
+          </li>
+          <li>
+            <a href=""><span>Contact</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

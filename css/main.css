@@ -1,45 +1,47 @@
-@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
- html {
-	 box-sizing: border-box;
-	 font-family: 'Playfair Display', serif;
-	 font-size: 62.5%;
-	 line-height: 1.6;
-	 -moz-osx-font-smoothing: grayscale;
-	 -webkit-font-smoothing: antialiased;
+* {
+  margin: 0;
+  padding: 0;
 }
- *, *::before, *::after {
-	 box-sizing: inherit;
+
+#page1,
+#page2 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  flex-direction: column;
+  position: absolute;
 }
- html, body {
-	 margin: 0;
-	 padding: 0;
-	 width: 100%;
-	 height: 100%;
-	 color: #fff;
-	 background-color: #11172f;
+
+a {
+  color: white;
+  text-decoration: none;
+  margin-top: 50px;
+  border: 1px solid white;
+  padding: 10px 30px;
 }
- main {
-	 display: block;
-	 width: 100%;
-	 height: 100%;
-	 position: relative;
-	 background-image: -webkit-radial-gradient(50% 50%, circle cover, #11172f 50%, rgba(0, 0, 0, 0.5));
-	 background-image: radial-gradient(50% 50%, circle cover, #11172f 50%, rgba(0, 0, 0, 0.5));
+
+#page1 {
+  background-color: ForestGreen;
 }
- .haunted-text {
-	 position: relative;
-	 top: 50%;
-	 left: 50%;
-	 width: 40%;
-	 max-width: 680px;
-	 margin: 0;
-	 transform: translate(-50%, -50%);
-	 font-size: 2.4rem;
-	 line-height: 1.4;
-	 text-align: center;
-	 visibility: hidden;
+
+#page2 {
+  background-color: DarkOrange;
 }
- .haunted-text .blast {
-	 will-change: opacity, filter;
+.slide-in {
+  animation: change 0.5s ease forwards;
+}
+
+@keyframes change {
+  from {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+
+  to {
+    transform: translateX(0%);
+  }
 }
  
