@@ -8,7 +8,7 @@
 
   for (let i = 0; i < 3; i++) {
     console.log(slideImg[i]);
-    slideImg[i].style.backgroundImage = `url('../image/${project}_${i}.png')`;
+    slideImg[i].style.backgroundImage = `url('./image/${project}_${i}.png')`;
   }
   projectName.innerHTML = `${project}`;
 
