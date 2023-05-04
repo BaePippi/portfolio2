@@ -1,11 +1,17 @@
 (function () {
   "use strict";
 
-  const arrow = document.querySelectorAll(".arrow");
+  const $item = document.querySelectorAll(".item");
 
-  arrow.forEach((item) => {
-    item.addEventListener("mouseover", (e) => {
-
+  $item.forEach((item) => {
+    item.addEventListener("click", (e) => {
+        localStorage.setItem("project", item.id);
+        for (let i = 0; i < item.attributes.length; i++) {
+          localStorage.setItem(
+            `${item.attributes[i].name}`,
+            item.attributes[i].value
+          );
+        }
     });
   });
 })();
