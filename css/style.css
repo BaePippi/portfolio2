@@ -473,24 +473,24 @@ body.fade {
 }
 
 .about {
-  background: rgba(0, 0, 0, 0) url("./image/snow.jpeg") no-repeat center;
+  background: rgba(0, 0, 0, 0) url("../image/snow.jpeg") no-repeat center;
   background-size: cover;
 }
 .hyft {
-  background: rgba(0, 0, 0, 0) url("./image/hyftMain2.png") no-repeat center;
+  background: rgba(0, 0, 0, 0) url("../image/hyftMain2.png") no-repeat center;
   background-size: cover;
 }
 .knotted {
-  background: rgba(0, 0, 0, 0) url("./image/knottedMain.png") no-repeat center;
+  background: rgba(0, 0, 0, 0) url("../image/knottedMain.png") no-repeat center;
   background-size: cover;
 }
 .dosiraktong {
-  background: rgba(0, 0, 0, 0) url("./image/dosiraktongMain.png") no-repeat
+  background: rgba(0, 0, 0, 0) url("../image/dosiraktongMain.png") no-repeat
     center;
   background-size: cover;
 }
 .pf {
-  background: rgba(0, 0, 0, 0) url("./image/BAESOYOUNG_0.png") no-repeat center;
+  background: rgba(0, 0, 0, 0) url("../image/BAESOYOUNG_0.png") no-repeat center;
   background-size: cover;
 }
 .hover {
