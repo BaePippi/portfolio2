@@ -1,5 +1,8 @@
 (function () {
   ("use strict");
+
+    alert('이 페이지는 해상도 1920 * 1020에 최적화 되어있습니다.')
+    
   // 랜딩페이지 텍스트 애니메이션
   const SEC = 1;
   function clip_text(dom) {
