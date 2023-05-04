@@ -51,11 +51,12 @@
   const homepageBtn = document.querySelector(".homepage");
 
   githubBtn.addEventListener("click", (e) => {
-    window.location.href = "https://github.com/BaePippi/newfirstproject.git";
+    const githubAddr = localStorage.getItem('github');
+    window.location.href = `${githubAddr}`;
   });
 
   homepageBtn.addEventListener("click", (e) => {
-    window.location.href =
-      "https://baepippi.github.io/newfirstproject/Knotted.html/knotted(fullpage).html#section1";
+    const homepageAddr = localStorage.getItem("homepage");
+    window.location.href = `${homepageAddr}`;
   });
 })();

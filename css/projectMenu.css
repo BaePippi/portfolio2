@@ -153,7 +153,7 @@ body.fade {
   width: 100px;
   height: 100px;
   margin: 30px 0;
-  background: url("../image/barcodelogo.png") no-repeat center;
+  background: url("../image/logo_blue.png") no-repeat center;
   background-size: cover;
   transform: rotate(-90deg);
 }

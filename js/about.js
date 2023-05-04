@@ -29,11 +29,59 @@
     $marker.style.left = e.offsetLeft + "px";
     $marker.style.width = e.offsetWidth + "px";
   }
+  // about 애니메이션
+  const $hauntedText = $("[data-haunted-text]");
+  const maxDuration = 2000;
+  const maxDelay = 500;
+  const minDuration = maxDuration - maxDelay;
 
+  $hauntedText.blast({
+    delimiter: "character",
+  });
+  setTimeout(function () {
+    $hauntedText.find(".blast").each(function (i, el) {
+      const $el = $(el);
+
+      const duration = getRandomValue(minDuration, maxDuration);
+      const delay = maxDuration - duration;
+      const blur = getRandomValue(2, 10);
+
+      // From
+      $el.velocity(
+        {
+          opacity: 0,
+          blur: blur,
+        },
+        {
+          duration: 0,
+        }
+      );
+
+      // To
+      $el.velocity(
+        {
+          opacity: 1,
+          blur: 0,
+        },
+        {
+          duration: duration,
+          delay: delay,
+          ease: [250, 0],
+        }
+      );
+    });
+
+    $hauntedText.css({ visibility: "visible" });
+  }, 500);
+
+  const getRandomValue = function (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
   // header-nav
   const $section = document.querySelectorAll("section");
   const $headerNavItem = document.querySelectorAll(".header-nav-item");
   let current = "";
+
   mainSwiper.on("slideChange", function () {
     current = mainSwiper.realIndex;
     $headerNavItem.forEach((menu) => {
@@ -58,62 +106,14 @@
       });
     }
     // about 애니메이션
-    if (current !== 1) {
-      const $hauntedText = $("[data-haunted-text]");
+    if (current !== 0) {
       $hauntedText.css({ visibility: "hidden" });
     }
-    if (current === 1) {
-      const $hauntedText = $("[data-haunted-text]");
-      const maxDuration = 2000;
-      const maxDelay = 500;
-      const minDuration = maxDuration - maxDelay;
-
-      $hauntedText.blast({
-        delimiter: "character",
-      });
-
-      setTimeout(function () {
-        $hauntedText.find(".blast").each(function (i, el) {
-          const $el = $(el);
-
-          const duration = getRandomValue(minDuration, maxDuration);
-          const delay = maxDuration - duration;
-          const blur = getRandomValue(2, 10);
-
-          // From
-          $el.velocity(
-            {
-              opacity: 0,
-              blur: blur,
-            },
-            {
-              duration: 0,
-            }
-          );
-
-          // To
-          $el.velocity(
-            {
-              opacity: 1,
-              blur: 0,
-            },
-            {
-              duration: duration,
-              delay: delay,
-              ease: [250, 0],
-            }
-          );
-        });
-
-        $hauntedText.css({ visibility: "visible" });
-      }, 500);
-
-      const getRandomValue = function (min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-      };
+    if (current === 0) {
+      $hauntedText.css({ visibility: "visible" });
     }
     //   skill countUp animation
-    if (current === 2) {
+    if (current === 1) {
       for (let i = 0; i < 8; i++) {
         counter($count[i], max[i]);
       }
@@ -132,7 +132,7 @@
       }
     }
     //   possibility 차트
-    if (current === 3 && $chart === null) {
+    if (current === 2 && $chart === null) {
       if ($chart === null) {
         $chart = new Chart(ctx, {
           type: "radar",
@@ -151,12 +151,12 @@
                 data: [80, 85, 100, 95, 95, 95],
                 borderWidth: 5,
                 fill: true,
-                backgroundColor: "#ff7d203f",
-                borderColor: "#ff7e20",
-                pointBackgroundColor: "#ff7e20",
-                pointBorderColor: "#ff7d203f",
+                backgroundColor: "rgba(0, 133, 201, 0.2)",
+                borderColor: "#0081C9",
+                pointBackgroundColor: "#0081C9",
+                pointBorderColor: "#0081C9",
                 pointHoverBackgroundColor: "#fff",
-                pointHoverBorderColor: "#ff7e20",
+                pointHoverBorderColor: "#0081C9",
               },
             ],
           },

@@ -153,7 +153,7 @@ body.fade {
   width: 100px;
   height: 100px;
   margin: 30px 0;
-  background: url("../image/barcodelogo.png") no-repeat center;
+  background: url("../image/logo_blue.png") no-repeat center;
   background-size: cover;
   transform: rotate(-90deg);
 }
@@ -224,7 +224,7 @@ body.fade {
   position: relative;
   display: block;
   width: 46.5vw;
-  border: 1px solid #ff5620;
+  border: 1px solid #0081C9;
 }
 .swiper {
   width: 100%;
@@ -266,7 +266,7 @@ body.fade {
   display: block;
   font-size: 5.2vw;
   font-weight: 600;
-  color: #ff5620;
+  color: #0081C9;
 }
 .contents {
   height: 50%;
