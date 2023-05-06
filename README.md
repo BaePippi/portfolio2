@@ -40,16 +40,16 @@ https://baepippi.github.io/portfolio2/
 
 ## 기술 스택
 
-<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"><img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"><img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-<br>
-<img src="https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white">
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"><img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"><img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"><img src="https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white">
 
 <br>
 
 ## 배운 점 & 아쉬운 점
 
 <p align="justify">
-
+디자인 적으로 많이 부족하다고 생각해 여러번 엎고 다시 만들다보니 생각보다 기간이 길어짐.
+애니메이션이 버벅대는 부분이 있음.
+혼자서 하는 프로젝트는 외롭다..팀원을 갈망합니다....🥲
 </p>
 
 <br>
