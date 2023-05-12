@@ -1,7 +1,7 @@
 (function () {
   ("use strict");
 
-    alert('이 페이지는 해상도 1920 * 1080에 최적화 되어있습니다.')
+  alert("이 페이지는 해상도 1920 * 1080에 최적화 되어있습니다.");
 
   // 랜딩페이지 텍스트 애니메이션
   const SEC = 1;
@@ -61,23 +61,25 @@
   const $pn4 = document.getElementById("pn4");
   const $pn = document.querySelector(".projectsName");
   const aa = $pn.firstElementChild.children;
+  const bb = document.querySelector(".splide__list");
 
   $slide.forEach((item) => {
     item.addEventListener("mouseenter", (e) => {
       item.classList.toggle("hover");
-        for (let i = 0; i < aa.length; i++) {
-          for (let z = 0; z < aa[i].children.length; z++) {
-            // console.log(aa[i].children[z]);
-            aa[i].children[z].classList.toggle("on");
-            aa[i].children[z].classList.toggle("off");
-          }
+      for (let i = 0; i < aa.length; i++) {
+        for (let z = 0; z < aa[i].children.length; z++) {
+          // console.log(aa[i].children[z]);
+          // if (e.target.classList) {
+          aa[i].children[z].classList.add("on");
+          aa[i].children[z].classList.remove("off");
+          // }
         }
-        $pn4.firstElementChild.innerText=`${item.getAttribute('id')}`
-        // console.dir($pn4)
-        setTimeout(()=>{
-          $pn4.classList.toggle("displayNone");
-        },300)
-
+      }
+      $pn4.firstElementChild.innerText = `${item.getAttribute("id")}`;
+      // console.dir($pn4)
+      setTimeout(() => {
+        $pn4.classList.remove("displayNone");
+      }, 300);
 
       $slide.forEach((item2) => {
         if (!item2.classList.contains("hover")) {
@@ -88,32 +90,44 @@
     });
     item.addEventListener("mouseleave", (e) => {
       item.classList.toggle("hover");
-      for (let i = 0; i < aa.length; i++) {
-        for (let z = 0; z < aa[i].children.length; z++) {
-          // console.log(aa[i].children[z]);
-          // if (aa[i].children[z].classList.contains("on")) {
-          //   aa[i].children[z].classList.remove("on");
-          // }
-          aa[i].children[z].classList.toggle("on");
-          aa[i].children[z].classList.toggle("off");
-        }
-      }
-      // $pn3.classList.toggle("on");
-      // setTimeout(()=>{
-        $pn4.classList.toggle("displayNone");
-      // },500)
-      
+
+     
 
       $slide.forEach((item2) => {
         item2.classList.remove("other");
       });
     });
     console.dir(item.attributes[3]);
-    item.addEventListener('click', e => {
-      localStorage.setItem('project', item.id)
-      for(let i=0; i<item.attributes.length; i++){        
-          localStorage.setItem(`${item.attributes[i].name}`, item.attributes[i].value)
+    item.addEventListener("click", (e) => {
+      localStorage.setItem("project", item.id);
+      for (let i = 0; i < item.attributes.length; i++) {
+        localStorage.setItem(
+          `${item.attributes[i].name}`,
+          item.attributes[i].value
+        );
+      }
+    });
+  });
+  document.addEventListener("mousemove", (e) => {
+    console.log(e.target.classList);
+    if (
+      !e.target.classList.contains("imgA") &&
+      !e.target.classList.contains("slideImg") &&
+      !e.target.classList.contains("splide__slide") &&
+      !e.target.classList.contains("splide__list") &&
+      !e.target.classList.contains("splide__track") &&
+      !e.target.classList.contains("arrow") &&
+      !e.target.classList.contains("line1") &&
+      !e.target.classList.contains("line2") &&
+      !e.target.classList.contains("line3")
+    ) {
+      for (let i = 0; i < aa.length; i++) {
+        for (let z = 0; z < aa[i].children.length; z++) {
+          aa[i].children[z].classList.remove("on");
+          aa[i].children[z].classList.add("off");
         }
-    })
+      }
+      $pn4.classList.add("displayNone");
+    }
   });
 })();
