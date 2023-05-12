@@ -126,6 +126,7 @@ body {
   opacity: 1;
   transition-duration: 3s;
   transition-property: opacity;
+  touch-action: none;
 }
 body.fade {
   opacity: 0;
