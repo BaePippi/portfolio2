@@ -1,6 +1,14 @@
 (function () {
   ("use strict");
 
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  window.addEventListener('resize', ()=>{
+    let vh = window.innerHeight*0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  })
+
   // alert("이 페이지는 해상도 1920 * 1080에 최적화 되어있습니다.");
 
   // 랜딩페이지 텍스트 애니메이션
