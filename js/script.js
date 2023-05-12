@@ -1,7 +1,7 @@
 (function () {
   ("use strict");
 
-  alert("이 페이지는 해상도 1920 * 1080에 최적화 되어있습니다.");
+  // alert("이 페이지는 해상도 1920 * 1080에 최적화 되어있습니다.");
 
   // 랜딩페이지 텍스트 애니메이션
   const SEC = 1;
@@ -29,21 +29,43 @@
   clip_text2(test3);
 
   const $flexBox = document.querySelector(".flexBox");
+  const $landingBox = document.querySelector(".landingBox")
   const $box = document.querySelectorAll(".box");
+  const $bgBox = document.querySelectorAll(".bgBox")
+  console.log($bgBox)
   window.addEventListener("click", (e) => {
-    $flexBox.classList.add("move");
+    $landingBox.classList.add("move");
     $box.forEach((e) => {
       e.classList.add("width100");
       console.log(e.style);
     });
+    console.log(window.pageXOffset + $box[2].getBoundingClientRect().left);
   });
+  window.addEventListener("resize", e=>{
+    if (
+      window.pageXOffset + $box[2].getBoundingClientRect().left<0 
+    ) {
+      console.log($landingBox.style);
+      if ($landingBox.style.display !== "none") {
+        $landingBox.style.display = "none";
+        $bgBox[2].style.display = "none";
+      }
+    }
+  })
 
   // 프로젝트 스와이퍼
   const splide = new Splide(".splide", {
     type: "loop",
     drag: "free",
     focus: 2,
-    perPage: 4.5,
+    // perPage: 4.5,
+    mediaQuery: "min",
+    breakpoints: {
+      1300:{perPage: 4 },
+      1024: { perPage: 3 },
+      768: { perPage: 2.5 },
+      680: { perPage: 1.5 },
+    },
     gap: 10,
     autoScroll: {
       speed: 1,
@@ -109,7 +131,6 @@
     });
   });
   document.addEventListener("mousemove", (e) => {
-    console.log(e.target.classList);
     if (
       !e.target.classList.contains("imgA") &&
       !e.target.classList.contains("slideImg") &&
