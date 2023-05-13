@@ -41,14 +41,27 @@
   const $box = document.querySelectorAll(".box");
   const $bgBox = document.querySelectorAll(".bgBox")
   console.log($bgBox)
-  window.addEventListener("click", (e) => {
+  window.addEventListener("load", e=>{
+    setTimeout(()=>{
+      landing()
+    },3500)
+  })
+  function landing(){
     $landingBox.classList.add("move");
     $box.forEach((e) => {
       e.classList.add("width100");
       console.log(e.style);
     });
     console.log(window.pageXOffset + $box[2].getBoundingClientRect().left);
-  });
+  }
+  // window.addEventListener("click", (e) => {
+  //   $landingBox.classList.add("move");
+  //   $box.forEach((e) => {
+  //     e.classList.add("width100");
+  //     console.log(e.style);
+  //   });
+  //   console.log(window.pageXOffset + $box[2].getBoundingClientRect().left);
+  // });
   window.addEventListener("resize", e=>{
     if (
       window.pageXOffset + $box[2].getBoundingClientRect().left<0 
