@@ -214,7 +214,7 @@ body.fade {
     margin-right: 47.8vw;
   }
   .one-small {
-    margin-right: 0.7vw;
+    /* margin-right: 0.7vw; */
     font-size: 2.5vw;
     width: 11.4167vw;
     height: 14.5vw;
@@ -663,6 +663,9 @@ body.fade {
     width: 8.3333vw;
 
     /* height: 65.1042vh; */
+  }
+  .projectsName > .inner .one-small {
+    width: 7vw;
   }
   .logo {
     width: 6.5104vw;
