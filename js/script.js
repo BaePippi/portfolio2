@@ -1,6 +1,6 @@
 (function () {
   ("use strict");
-  // alert("이 페이지는 해상도 1920 * 1080에 최적화 되어있습니다.(현재 반응형 수정중)");
+  alert("이 페이지는 해상도 1920 * 1080에 최적화 되어있습니다.(현재 반응형 수정중)");
 
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
