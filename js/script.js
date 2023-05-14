@@ -1,6 +1,6 @@
 (function () {
   ("use strict");
-  alert("이 페이지는 해상도 1920 * 1080에 최적화 되어있습니다.(현재 반응형 수정중)");
+  // alert("이 페이지는 해상도 1920 * 1080에 최적화 되어있습니다.(현재 반응형 수정중)");
 
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -71,6 +71,22 @@
         $landingBox.style.display = "none";
         $bgBox[2].style.display = "none";
       }
+    }
+  })
+  // 반응형 메뉴
+  const $header = document.querySelector(".header")
+  const $menuBtn = document.querySelector(".menuBtn")
+
+  $menuBtn.addEventListener("click", e=>{
+    $header.classList.toggle("clickMenu");
+    const $menuFlex = document.querySelector(".menuFlex")
+    console.log($header.classList.contains("clickMenu"));
+    if ($header.classList.contains("clickMenu")){
+      setTimeout(() => {
+        $menuFlex.style.display = "flex";
+      }, 800);
+    } else {
+      $menuFlex.style.display = "none";
     }
   })
 

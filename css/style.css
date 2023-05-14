@@ -277,22 +277,24 @@ body.fade {
 .header {
   position: fixed;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   width: 64px;
   height: 100vh;
+  padding: 0 6.5px;
   writing-mode: vertical-rl;
   background: #fff;
   border-right: 1px solid #e3e3e3;
   z-index: 6;
-  transition: all 1s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 .logo {
   width: 50px;
   height: 57px;
   margin: 30px 0;
   background: url("../image/polygonLogo.svg") no-repeat center;
-  background-size: cover;
+  background-size: contain;
+  align-self: flex-end;
   /* transform: rotate(-90deg); */
 }
 .menu {
@@ -302,7 +304,17 @@ body.fade {
   padding: 30px 0;
   transform: rotate(180deg);
 }
-.effect a, .effect div {
+.menuFlex {
+  position: relative;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  transition: all 0.8s ease-in-out;
+}
+.menu1920 {
+  align-self: center;
+}
+.effect {
   overflow: visible;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
@@ -332,7 +344,7 @@ body.fade {
   }
 }
 
-.effect a:hover, .effect div:hover {
+.effect:hover {
   -webkit-animation-name: eff-move;
   animation-name: eff-move;
   -webkit-animation-duration: 0.4s;
@@ -575,11 +587,6 @@ body.fade {
   opacity: 1;
 }
 
-@media screen and (max-width: 640px) {
-  .wrap {
-    height: calc(var(--var, 1vh) * 100);
-  }
-}
 @media screen and (max-width: 1024px) {
   .header {
     /* position: relative;
@@ -587,23 +594,88 @@ body.fade {
     width: 334px;
     height: 667px;
     z-index: 9; */
+    /* width: 6.2500vw; */
     height: 48.8281vh;
     border: none;
     background-color: transparent;
+    justify-content: flex-start;
   }
-  .menu{
+  /* .logo{
+    width: 4.8828vw;
+    height: 5.5664vw;
+    margin: 2.9297vw 0;
+  } */
+  .menu {
     justify-content: flex-end;
     padding: 0;
   }
-  .menu1920 {
+  .menuFlex {
     display: none;
   }
 
   .menuBtn {
     display: block;
-    width: 31px;
+    width: 51px;
     height: 110px;
     background: url(../image/menuBtn.svg) no-repeat center;
-    background-size: cover;
+    background-size: contain;
+  }
+  .clickMenu {
+    width: 33.2031vw !important;
+    align-items: flex-end;
+    border-radius: 0 0 20px 0;
+    box-shadow: 0px 4px 30px rgba(204, 204, 204, 0.5);
+  }
+  .clickMenu .menuFlex {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: flex-end;
+    transform: rotate(90deg);
+    width: 19.5313vw;
+    height: 29.2969vw;
+    opacity: 0;
+    animation: fadeInText .7s ease-in-out forwards;
+  }
+  .clickMenu .menuBtn {
+    align-self: flex-end;
+  }
+  .clickMenu .menu {
+    flex-direction: column;
+  }
+  .clickMenu .menu1920 {
+    align-self: flex-end;
+    font-size: 30px;
+    
+  }
+  @keyframes fadeInText {
+    100% {
+      opacity:1;
+    }
+  }
+
+  .logo {
+    margin-left: 1px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    width: 8.3333vw;
+
+    /* height: 65.1042vh; */
+  }
+  .logo {
+    width: 6.5104vw;
+    height: 7.4219vw;
+    margin: 3.9063vw 0;
+  }
+  .menuBtn {
+    width: 6.6406vw;
+    height: 14.3229vw;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .wrap {
+    height: calc(var(--var, 1vh) * 100);
   }
 }
