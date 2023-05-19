@@ -72,14 +72,17 @@
         $bgBox[2].style.display = "none";
       }
     }
+    console.log(window.innerWidth)
+    if(window.innerWidth>1024){
+    }
   })
   // 반응형 메뉴
+  const $menuFlex = document.querySelector(".menuFlex")
   const $header = document.querySelector(".header")
   const $menuBtn = document.querySelector(".menuBtn")
 
   $menuBtn.addEventListener("click", e=>{
     $header.classList.toggle("clickMenu");
-    const $menuFlex = document.querySelector(".menuFlex")
     console.log($header.classList.contains("clickMenu"));
     if ($header.classList.contains("clickMenu")){
       setTimeout(() => {
