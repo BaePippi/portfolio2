@@ -19,7 +19,7 @@ https://baepippi.github.io/portfolio2/
 ## 개발 기간
 
 <p align="justify">
-2023.03 ~ 
+2023.03 ~ 개발중
 </p>
 
 <br>
