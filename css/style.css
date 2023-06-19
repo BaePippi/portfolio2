@@ -305,7 +305,6 @@ body.fade {
   background: url("../image/polygonLogo.svg") no-repeat center;
   background-size: contain;
   align-self: flex-end;
-  /* transform: rotate(-90deg); */
 }
 .menu {
   display: flex;
