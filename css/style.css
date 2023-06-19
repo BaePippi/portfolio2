@@ -524,6 +524,10 @@ body.fade {
   background: rgba(0, 0, 0, 0) url("../image/BAESOYOUNG_0.png") no-repeat center;
   background-size: cover;
 }
+.weather {
+  background: rgba(0, 0, 0, 0) url("../image/O-WEATHER_1.png") no-repeat center;
+  background-size: cover;
+}
 .hover {
   background-color: rgba(0, 0, 0, 0.1);
   background-blend-mode: darken;
